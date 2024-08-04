@@ -1,5 +1,5 @@
 // Array of class selectors where json data will be inserted
-const output = [document.querySelector('.points-Entry'), document.querySelector('.rebounds-Entry'), document.querySelector('.threes-Entry')];
+const output = [document.querySelector('.pointsEntry'), document.querySelector('.reboundsEntry'), document.querySelector('.threesEntry')];
 
 // Event delegation for dynamically added elements
 document.addEventListener('click', function(event) {
@@ -55,13 +55,13 @@ function readJSON(json, value) {
 }
 
 // Function that prints data to HTML in an accordian
-function printData(player, value) {
+function printData(data, value) {
     let html = '';
     // Used to determine whether final output will include "%" symbol
     let percentage = value === 2 ? 100 : 1;
 
     // Displays data for top 3 players of each stat
-    player.forEach((element, index) => {
+    data.forEach((element, index) => {
         if (index < 3) {
             html += `<li class="list-group-item pb-0"><span><p class="playerPosition">${element.pos}</p> <p class="playerName ps-5 fw-medium">${element.fn} ${element.ln}</p></span>  <span class="stat fw-medium">${round(element.val*percentage, value)}</span></li>`;
         }
@@ -70,7 +70,7 @@ function printData(player, value) {
                 <div id="panelsStayOpen-collapse${value}" class="accordion-collapse collapse">
                     <div class="accordion-body">`;
     // Displays data for the rest of the team within an accordian
-    player.forEach((element, index) => {
+    data.forEach((element, index) => {
         if (index > 3) {
             html += `<li class="list-group-item pb-0"><span><p class="playerPosition">${element.pos}</p> <p class="playerName ps-5 fw-medium">${element.fn} ${element.ln}</p></span>  <span class="stat fw-medium">${round(element.val*percentage, value)}</span></li>`;
         }
