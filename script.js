@@ -16,6 +16,7 @@ document.addEventListener('click', function(event) {
 // Function that calls for the data
 function getStats() {
     // Initializes placeholders for the data
+    // Takes json file and index of array as argument 
     output[0].innerHTML = 'Try Again';
     readJSON('json/points.json', 0);
     output[1].innerHTML = 'Try Again';
@@ -26,7 +27,7 @@ function getStats() {
 
 // Function that fetches data
 function readJSON(json, value) {
-    // Fetches data from each json file
+    // Fetches data from json file for each stat
     if (value === 0){
         playerPTS = fetch(json)
         .then(response => response.json())
@@ -85,7 +86,7 @@ function printData(player, value) {
     output[value].innerHTML = html;
 }
 
-// Function used to round percentages
+// Function used to keep value under 2 decimals
 function round(stat, value) {
     if (value === 2) {
         stat = Math.round(stat * 100) / 100;
