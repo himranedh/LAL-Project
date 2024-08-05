@@ -62,9 +62,9 @@ function printData(data, value, percent = false) {
                             ${element.fn} ${element.ln}
                         </p>
                     </section>
-                    <p class="stat fw-medium">
+                    <section class="stat fw-medium">
                         ${round(element.val, percent)}
-                    </p>
+                    </section>
                 </li>`;
     });
     html += `<div class="accordion-item">
@@ -81,9 +81,9 @@ function printData(data, value, percent = false) {
                             ${element.fn} ${element.ln}
                         </p>
                     </section>
-                    <p class="stat fw-medium">
+                    <section class="stat fw-medium">
                         ${round(element.val, percent)}
-                    </p>
+                    </section>
                 </li>`;
     });
     html += `       </div>
