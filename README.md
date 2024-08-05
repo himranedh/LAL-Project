@@ -1,6 +1,6 @@
 # LAL-Project
 
-https://himranedh.github.io/LAL-Project/
+Live Project: https://himranedh.github.io/LAL-Project/
 
 Article: https://www.nba.com/lakers/news/2020-21-lakers-season-summary
 
