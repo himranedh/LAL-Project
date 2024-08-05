@@ -53,7 +53,7 @@ function printData(data, value, percent = false) {
 
     // Displays data for top players of each stat
     data.slice(0, topPlayers).forEach((element) => {
-        html += `<li class="list-group-item pb-0">
+        html += `<li class="list-group-item d-flex justify-content-between pb-0">
                     <section>
                         <p class="playerPosition">
                             ${element.pos}
@@ -72,7 +72,7 @@ function printData(data, value, percent = false) {
                     <div class="accordion-body">`;
     // Displays data for the rest of the team within an accordian
     data.slice(topPlayers).forEach((element) => {
-        html += `<li class="list-group-item pb-0">
+        html += `<li class="list-group-item d-flex justify-content-between border-start-0 border-top-0 border-end-0 pb-0">
                     <section>
                         <p class="playerPosition">
                             ${element.pos}
@@ -89,7 +89,7 @@ function printData(data, value, percent = false) {
     html += `       </div>
                 </div>
                 <h2 class="accordion-header">
-                    <button class="toggle accordion-button" 
+                    <button class="flex-column accordion-button" 
                     type="button" 
                     data-bs-toggle="collapse" 
                     data-bs-target="#panelsStayOpen-collapse${value}" 
@@ -115,8 +115,8 @@ function round(stat, percent) {
 
 // Event delegation for dynamically added elements
 document.addEventListener('click', function(event) {
-    if (event.target.matches('.toggle') || event.target.closest('.toggle')) {
-        const button = event.target.closest('.toggle');
+    if (event.target.matches('.accordion-button') || event.target.closest('.accordion-button')) {
+        const button = event.target.closest('.accordion-button');
         const arrow = button.querySelector('.arrow');
         // Toggles the active state of accordian arrow
         if (arrow) {

@@ -15,11 +15,6 @@ section{
     border-bottom: 2px solid #F2BA49;
 }
 
-.toggle{
-    flex-direction: column;
-    justify-content: center;
-}
-
 .arrow{
     color: purple;
     transition-duration: 400ms;
@@ -31,17 +26,6 @@ section{
 
 .sticky-top{
     background-color: #F8F8F8;
-}
-
-.accordion-item .list-group-item{
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-}
-
-.list-group-item{
-    display: flex;
-    justify-content: space-between;
 }
 
 /* .card{
