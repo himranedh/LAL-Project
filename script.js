@@ -89,7 +89,12 @@ function printData(data, value, percent = false) {
     html += `       </div>
                 </div>
                 <h2 class="accordion-header">
-                    <button class="toggle accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse${value}" aria-expanded="true" aria-controls="panelsStayOpen-collapse${value}">
+                    <button class="toggle accordion-button" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#panelsStayOpen-collapse${value}" 
+                    aria-expanded="true" 
+                    aria-controls="panelsStayOpen-collapse${value}">
                         <i class="arrow display-5 fa-solid fa-angle-down"></i>
                     </button>
                 </h2>
