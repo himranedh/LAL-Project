@@ -63,7 +63,7 @@ function printData(data, value) {
     // Displays data for top 3 players of each stat
     data.forEach((element, index) => {
         if (index < 3) {
-            html += `<li class="list-group-item pb-0"><span><p class="playerPosition">${element.pos}</p> <p class="playerName ps-5 fw-medium">${element.fn} ${element.ln}</p></span>  <span class="stat fw-medium">${round(element.val*percentage, value)}</span></li>`;
+            html += `<li class="list-group-item pb-0"><section><p class="playerPosition">${element.pos}</p> <p class="playerName ps-5 fw-medium">${element.fn} ${element.ln}</p></section>  <section class="stat fw-medium">${round(element.val*percentage, value)}</section></li>`;
         }
     });
     html +=`<div class="accordion-item">
@@ -72,7 +72,7 @@ function printData(data, value) {
     // Displays data for the rest of the team within an accordian
     data.forEach((element, index) => {
         if (index > 3) {
-            html += `<li class="list-group-item pb-0"><span><p class="playerPosition">${element.pos}</p> <p class="playerName ps-5 fw-medium">${element.fn} ${element.ln}</p></span>  <span class="stat fw-medium">${round(element.val*percentage, value)}</span></li>`;
+            html += `<li class="list-group-item pb-0"><section><p class="playerPosition">${element.pos}</p> <p class="playerName ps-5 fw-medium">${element.fn} ${element.ln}</p></section>  <section class="stat fw-medium">${round(element.val*percentage, value)}</section></li>`;
         }
     });
     html +=`        </div>
