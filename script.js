@@ -56,9 +56,9 @@ function readJSON(json, value) {
 
 // Function that prints data to HTML in an accordian
 function printData(data, value) {
-    let html = '';
+    var html = '';
     // Used to determine whether final output will include "%" symbol
-    let percentage = value === 2 ? 100 : 1;
+    var percentage = value === 2 ? 100 : 1;
 
     // Displays data for top 3 players of each stat
     data.forEach((element, index) => {

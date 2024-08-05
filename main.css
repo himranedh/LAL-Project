@@ -16,7 +16,6 @@ section{
 }
 
 .toggle{
-    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -28,6 +27,10 @@ section{
 
 .arrow.active{
     transform: rotate(180deg);
+}
+
+.sticky-top{
+    background-color: #F8F8F8;
 }
 
 .accordion-item .list-group-item{
